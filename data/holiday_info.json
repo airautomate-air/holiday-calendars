@@ -1,0 +1,136 @@
+{
+  "US": {
+    "New Year's Day": {
+      "description": "Marks the beginning of the Gregorian calendar year. Celebrated with fireworks, parties, and making resolutions for the upcoming year.",
+      "traditions": [
+        "Fireworks displays at midnight",
+        "Countdown events (e.g., Times Square ball drop)",
+        "Champagne toasts",
+        "New Year's resolutions",
+        "Parades and festivals"
+      ],
+      "observance": "Federal holiday",
+      "source": "Adapted from Wikipedia and public domain sources"
+    },
+    "Martin Luther King Jr. Day": {
+      "description": "Honors the civil rights leader Dr. Martin Luther King Jr. Observed on the third Monday of January each year.",
+      "traditions": [
+        "Volunteer service (MLK Day of Service)",
+        "Educational programs about civil rights",
+        "Parades and marches",
+        "Speeches and reflections on equality"
+      ],
+      "observance": "Federal holiday",
+      "source": "Adapted from Wikipedia and public domain sources"
+    },
+    "Presidents' Day": {
+      "description": "Originally established to honor George Washington, now commonly viewed as a celebration of all U.S. presidents.",
+      "traditions": [
+        "Retail sales and promotions",
+        "Patriotic ceremonies",
+        "Historical reenactments",
+        "Visits to presidential monuments and museums"
+      ],
+      "observance": "Federal holiday",
+      "source": "Adapted from Wikipedia and public domain sources"
+    },
+    "Memorial Day": {
+      "description": "Honors military personnel who died while serving in the United States Armed Forces. Observed on the last Monday of May.",
+      "traditions": [
+        "Visiting cemeteries and memorials",
+        "National Moment of Remembrance at 3:00 p.m.",
+        "Flag placed at half-staff until noon",
+        "Family gatherings and barbecues",
+        "Parades"
+      ],
+      "observance": "Federal holiday",
+      "source": "Adapted from Wikipedia and public domain sources"
+    },
+    "Juneteenth National Independence Day": {
+      "description": "Commemorates the emancipation of enslaved African Americans in the United States. Marks June 19, 1865, when Union troops arrived in Galveston, Texas with news of freedom.",
+      "traditions": [
+        "Community festivals and parades",
+        "Educational events about African American history",
+        "Barbecues and cookouts",
+        "Reflecting on freedom and equality",
+        "Reading of the Emancipation Proclamation"
+      ],
+      "observance": "Federal holiday",
+      "source": "Adapted from Wikipedia and public domain sources"
+    },
+    "Independence Day": {
+      "description": "Celebrates the adoption of the Declaration of Independence on July 4, 1776, declaring independence from Great Britain.",
+      "traditions": [
+        "Fireworks displays",
+        "Barbecues and picnics",
+        "Parades",
+        "Concerts and concerts",
+        "Displaying the American flag",
+        "Patriotic music"
+      ],
+      "observance": "Federal holiday",
+      "source": "Adapted from Wikipedia and public domain sources"
+    },
+    "Labor Day": {
+      "description": "Honors the American labor movement and the contributions of workers to the strength, prosperity, and well-being of the country. Observed on the first Monday of September.",
+      "traditions": [
+        "End-of-summer celebrations",
+        "Parades",
+        "Picnics and barbecues",
+        "Retail sales",
+        "Travel and vacations"
+      ],
+      "observance": "Federal holiday",
+      "source": "Adapted from Wikipedia and public domain sources"
+    },
+    "Columbus Day": {
+      "description": "Commemorates Christopher Columbus's arrival in the Americas on October 12, 1492. Also known as Indigenous Peoples' Day in many jurisdictions.",
+      "traditions": [
+        "Parades and festivals",
+        "Italian-American heritage celebrations",
+        "Historical reenactments",
+        "Activities exploring colonial history",
+        "Recognition of Native American cultures (in areas observing Indigenous Peoples' Day)"
+      ],
+      "observance": "Federal holiday",
+      "source": "Adapted from Wikipedia and public domain sources"
+    },
+    "Veterans Day": {
+      "description": "Honors military veterans who served in the United States Armed Forces. Observed on November 11th each year.",
+      "traditions": [
+        "Moment of silence at 11:00 a.m.",
+        "Parades and ceremonies",
+        "Visiting veterans memorials",
+        "Thanking veterans for their service",
+        "Educational programs about military service"
+      ],
+      "observance": "Federal holiday",
+      "source": "Adapted from Wikipedia and public domain sources"
+    },
+    "Thanksgiving Day": {
+      "description": "A day for giving thanks for the blessing of the harvest and of the preceding year. Observed on the fourth Thursday of November.",
+      "traditions": [
+        "Family gatherings and feasts",
+        "Traditional foods (turkey, stuffing, cranberry sauce, pie)",
+        "Watching football games",
+        "Volunteering and charitable giving",
+        "Thanksgiving parades (e.g., Macy's Parade)"
+      ],
+      "observance": "Federal holiday",
+      "source": "Adapted from Wikipedia and public domain sources"
+    },
+    "Christmas Day": {
+      "description": "Celebrates the birth of Jesus Christ. Observed on December 25th each year.",
+      "traditions": [
+        "Gift-giving",
+        "Decorating Christmas trees",
+        "Attending church services",
+        "Family meals and gatherings",
+        "Santa Claus and holiday folklore",
+        "Holiday lights and decorations"
+      ],
+      "observance": "Federal holiday",
+      "source": "Adapted from Wikipedia and public domain sources"
+    }
+  }
+}

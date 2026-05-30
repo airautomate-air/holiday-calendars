@@ -1,0 +1,3 @@
+Flask==2.3.3
+python-holidays==0.25
+icals==0.4

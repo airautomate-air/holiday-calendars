@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ country_name }} Holidays {{ year }}</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        header h1 {
+            font-size: 2rem;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+        header .subtitle {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+        }
+        .nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        .nav a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .nav a:hover {
+            text-decoration: underline;
+        }
+        .nav .current-year {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        .actions {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        .actions .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: background 0.3s;
+        }
+        .actions .btn:hover {
+            background: #2980b9;
+        }
+        .actions .download-btn {
+            background: #95a5a6;
+        }
+        .actions .download-btn:hover {
+            background: #7f8c8d;
+        }
+        .holidays-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .holidays-table th,
+        .holidays-table td {
+            padding: 1.25rem;
+            text-align: left;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        .holidays-table th {
+            background-color: #ecf0f1;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+        }
+        .holidays-table tr:hover {
+            background-color: #f8f9fa;
+        }
+        .holidays-table tr:hover td {
+            background-color: #f8f9fa;
+        }
+        .holidays-table .date-column {
+            width: 15%;
+            font-family: monospace;
+        }
+        .holidays-table .name-column {
+            width: 45%;
+        }
+        .holidays-table .day-column {
+            width: 15%;
+        }
+        .holidays-table .countdown-column {
+            width: 25%;
+        }
+        .countdown {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        .countdown.past {
+            background: #f8d7da;
+            color: #842029;
+        }
+        .countdown.today {
+            background: #d1ecf1;
+            color: #0c5460;
+        }
+        .countdown.upcoming {
+            background: #d4edda;
+            color: #155724;
+        }
+        .no-holidays {
+            text-align: center;
+            padding: 3rem;
+            color: #7f8c8d;
+        }
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 2rem;
+            color: #95a5a6;
+            font-size: 0.9rem;
+            border-top: 1px solid #ecf0f1;
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            .holidays-table th,
+            .holidays-table td {
+                padding: 1rem;
+            }
+            .nav {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            .actions {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            .holidays-table .date-column {
+                width: 20%;
+            }
+            .holidays-table .name-column {
+                width: 40%;
+            }
+            .holidays-table .day-column {
+                width: 20%;
+            }
+            .holidays-table .countdown-column {
+                width: 20%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>{{ country_name }} Holidays</h1>
+        <div class="subtitle">{{ year }}</div>
+    </header>
+
+    <div class="container">
+        <nav class="nav">
+            <a href="/">← Back to all countries</a>
+            {% if year > 1900 %}
+            <a href="/calendar/{{ country }}/{{ year-1 }}">← {{ year-1 }}</a>
+            {% endif %}
+            <span class="current-year">{{ year }}</span>
+            <a href="/calendar/{{ country }}/{{ year+1 }}">{{ year+1 }} →</a>
+            <a href="/" style="margin-left: 1.5rem;">← Back to home</a>
+        </nav>
+
+        <div class="actions">
+            <a href="/download/{{ country }}{% if year %}/{{ year }}{% endif %}" class="btn download-btn">Download ICS</a>
+            <a href="/api/holidays/{{ country }}{% if year %}/{{ year }}{% endif %}" class="btn" style="background: #27ae60;">View API</a>
+        </div>
+
+        {% if holidays %}
+        <table class="holidays-table">
+            <thead>
+                <tr>
+                    <th class="date-column">Date</th>
+                    <th class="name-column">Holiday Name</th>
+                    <th class="day-column">Day</th>
+                    <th class="countdown-column">Countdown</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for holiday in holidays %}
+                <tr>
+                    <td class="date-column">{{ holiday.date }}</td>
+                    <td class="name-column">
+                        <a href="/holiday/{{ country|lower }}/{{ holiday.name|replace(' ', '-')|lower }}">{{ holiday.name }}</a>
+                    </td>
+                    <td class="day-column">{{ holiday.day_of_week }}</td>
+                    <td class="countdown-column">
+                        {% if holiday.days_until is none %}
+                            <span class="countdown past">Passed</span>
+                        {% elif holiday.days_until == 0 %}
+                            <span class="countdown today">Today!</span>
+                        {% elif holiday.days_until < 0 %}
+                            <span class="countdown past">{{ holiday.days_until|abs }} days ago</span>
+                        {% else %}
+                            <span class="countdown updateting" data-target="{{ holiday.date }}T00:00:00">
+                                {{ holiday.days_until }} days
+                            </span>
+                        {% endif %}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+        <div class="no-holidays">
+            <p>No holiday data available for {{ country_name }} in {{ year }}.</p>
+        </div>
+        {% endif %}
+    </div>
+
+    <footer>
+        <p>&copy; {{ current_year }} Holiday Calendars. Data sourced from public domain holiday libraries.</p>
+    </footer>
+
+    <script>
+        // Update countdown timers
+        function updateCountdown(element) {
+            const targetDate = new Date(element.getAttribute('data-target'));
+            const now = new Date();
+            const diff = targetDate - now;
+
+            if (diff <= 0) {
+                element.textContent = 'Today!';
+                element.className = 'countdown today';
+                return;
+            }
+
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+            if (days > 365) {
+                element.textContent = 'In over a year';
+            } else {
+                element.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+            }
+            element.className = 'countdown upcoming';
+        }
+
+        // Update all countdown elements
+        document.addEventListener('DOMContentLoaded', function() {
+            const countdownElements = document.querySelectorAll('.countdown.updateting');
+            countdownElements.forEach(updateCountdown);
+            // Update every second
+            setInterval(() => {
+                document.querySelectorAll('.countdown.updateting').forEach(updateCountdown);
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
