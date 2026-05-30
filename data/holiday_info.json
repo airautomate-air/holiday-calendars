@@ -132,5 +132,98 @@
       "observance": "Federal holiday",
       "source": "Adapted from Wikipedia and public domain sources"
     }
+  },
+  "UK": {
+    "New Year's Day": {
+      "description": "Marks the beginning of the Gregorian calendar year.",
+      "traditions": [
+        "Fireworks displays",
+        "Parties and gatherings",
+        "First-foot visiting (Scotland)",
+        "New Year's resolutions"
+      ],
+      "observance": "Bank holiday",
+      "source": "Adapted from Wikipedia and public domain sources"
+    },
+    "Good Friday": {
+      "description": "Commemorates the crucifixion of Jesus Christ and his death at Calvary.",
+      "traditions": [
+        "Church services",
+        "Processions",
+        "Fasting and abstinence (for some)",
+        "Hot cross buns"
+      ],
+      "observance": "Bank holiday",
+      "source": "Adapted from Wikipedia and public domain sources"
+    },
+    "Easter Monday": {
+      "description": "The day after Easter Sunday, celebrating the resurrection of Jesus Christ.",
+      "traditions": [
+        "Egg rolling",
+        "Sports events",
+        "Family gatherings",
+        "Outdoor activities"
+      ],
+      "observance": "Bank holiday",
+      "source": "Adapted from Wikipedia and public domain sources"
+    },
+    "Early May Bank Holiday": {
+      "description": "Spring bank holiday observed on the first Monday in May.",
+      "traditions": [
+        "May Day celebrations",
+        "Morris dancing",
+        "Maypole dancing",
+        "Spring festivals"
+      ],
+      "observance": "Bank holiday",
+      "source": "Adapted from Wikipedia and public domain sources"
+    },
+    "Spring Bank Holiday": {
+      "description": "Late spring bank holiday observed on the last Monday in May.",
+      "traditions": [
+        "Spring outings",
+        "Gardening activities",
+        "Short breaks and holidays",
+        "Family time"
+      ],
+      "observance": "Bank holiday",
+      "source": "Adapted from Wikipedia and public domain sources"
+    },
+    "Summer Bank Holiday": {
+      "description": "Summer bank holiday observed on the last Monday in August (Scotland: first Monday in August).",
+      "traditions": [
+        "End-of-summer activities",
+        "Notting Hill Carnival (London)",
+        "Music festivals",
+        "Travel and short breaks"
+      ],
+      "observance": "Bank holiday",
+      "source": "Adapted from Wikipedia and public domain sources"
+    },
+    "Christmas Day": {
+      "description": "Celebrates the birth of Jesus Christ.",
+      "traditions": [
+        "Gift-giving",
+        "Christmas dinner",
+        "Church services",
+        "Family gatherings",
+        "Decorating homes",
+        "Watching the Queen's/King's speech"
+      ],
+      "observance": "Bank holiday",
+      "source": "Adapted from Wikipedia and public domain sources"
+    },
+    "Boxing Day": {
+      "description": "Day after Christmas Day, historically a day to give gifts to the less fortunate.",
+      "traditions": [
+        "Shopping sales",
+        "Sports events (especially football)",
+        "Returning unwanted gifts",
+        "Time with family",
+        "Fox hunting (historically)"
+      ],
+      "observance": "Bank holiday",
+      "source": "Adapted from Wikipedia and public domain sources"
+    }
   }
 }
