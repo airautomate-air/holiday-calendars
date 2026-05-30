@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ holiday_name }} - {{ country_name }} Holiday Details</title>
+    <title>{{ holiday.name }} - {{ country_name }} Holiday Details</title>
     <style>
         * {
             margin: 0;
@@ -151,20 +151,31 @@
 
             <div class="content-section">
                 <h3>Description</h3>
-                <p>This holiday is observed in {{ country_name }} on {{ holiday.date }}. It is a time for celebration and reflection.</p>
-                <!-- In a full implementation, we would pull detailed description from a database or API -->
+                <p>{{ details.description }}</p>
             </div>
 
             <div class="content-section traditions">
                 <h3>Traditions and Observances</h3>
-                <p>While specific traditions vary, common ways to observe this holiday include:</p>
+                {% if details.traditions %}
+                <p>Common ways to observe this holiday include:</p>
                 <ul>
-                    <li>Spending time with family and friends</li>
-                    <li>Participating in community events</li>
-                    <li>Observing any traditional customs associated with the holiday</li>
-                    <li>Taking time for personal reflection</li>
+                    {% for tradition in details.traditions %}
+                    <li>{{ tradition }}</li>
+                    {% endfor %}
                 </ul>
-                <!-- In a full implementation, we would pull specific traditions from a database -->
+                {% else %}
+                <p>Information about specific traditions is not available.</p>
+                {% endif %}
+            </div>
+
+            <div class="content-section">
+                <h3>Observance</h3>
+                <p><strong>{{ details.observance }}</strong></p>
+            </div>
+
+            <div class="content-section">
+                <h3>Source</h3>
+                <p>{{ details.source }}</p>
             </div>
         </div>
     </div>
